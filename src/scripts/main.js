@@ -60,17 +60,8 @@ export default class Boot
      */
     initThreeRenderer()
     {
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('webgl2', { alpha: false });
-
         // renderer
-        this.threeRenderer = new THREE.WebGLRenderer({
-            canvas    : canvas,
-            context   : context,
-            stencil   : true,
-            antialias : true,
-            alpha     : true
-        });
+        this.threeRenderer = new THREE.WebGLRenderer({ antialias: true });
 
         // scene
         this.threeScene = new THREE.Scene();
